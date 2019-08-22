@@ -1,0 +1,22 @@
+.rollsContainer {
+    padding: 3%;
+}
+
+.rollsElement {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    padding: 2%;
+    justify-content: space-around;
+}
+
+.rollsElement img {
+    width: 100px;
+}
+
+.rollsElement button {
+    background-color: transparent;
+    border: none;
+    display: block;
+
+}

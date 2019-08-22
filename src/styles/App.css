@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 1240px;
+  margin: 0 auto;
+  font-family: arial;
+  font-size: 10px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main {
+  flex-grow: 1;
+  flex-direction: row;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background: linear-gradient(90deg, #cac531 0%, #e0cd1c 85%);
+  /* background-image: url("../img/tapeta.jpg"); */
+}
+
+.main aside {
+  min-width: 80px;
+  min-height: 100%;
+}
+
+.main main {
+  flex-grow: 1;
+}
+
+footer {
+  min-height: 40px;
+  background-color: #222;
+}

@@ -1,0 +1,15 @@
+.StartPage {
+    padding: 30px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+
+}
+
+.StartPage img {
+    width: 70%;
+}
+
+.StartPage h1 {
+    margin: 40px;
+}

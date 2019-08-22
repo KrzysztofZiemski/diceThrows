@@ -11,7 +11,8 @@ import ErrorPage from './ErrorPage'
 class Pages extends React.Component {
     state = {
         dicesPicked: [],
-        history: []
+        history: [],
+        actuallyIdPickPage: 1,
     }
 
     handleDelete = (id) => {
@@ -23,10 +24,15 @@ class Pages extends React.Component {
         })
     }
     handleAdd = (object) => {
+
         let dicesPicked = [...this.state.dicesPicked]
+        let newObject = object;
+        newObject.id = this.state.actuallyIdPickPage;
         dicesPicked.push(object)
+
         this.setState({
-            dicesPicked
+            dicesPicked,
+            actuallyIdPickPage: this.state.actuallyIdPickPage + 1,
         })
 
 
@@ -57,7 +63,7 @@ class Pages extends React.Component {
 
         this.setState({
             dicesPicked,
-            history
+            history,
         })
 
     }

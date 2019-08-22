@@ -140,18 +140,9 @@ input[type=number]::-webkit-outer-spin-button {
   position: relative;
 }
 
-.formPicked>div:nth-child(4) input::after {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 2px #000;
-}
 
-.formPicked>div:nth-child(4) input:checked::after {
-  background-color: red;
-}
+
+
 
 .formPicked>button:nth-child(5) {
   width: 15%;

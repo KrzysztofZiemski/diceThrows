@@ -11,11 +11,14 @@ class RollPage extends React.Component {
         const show = this.props.dicesPicked.map(element => {
             let showLastThrow = false
             //create img html element with matching source. We can have different quality dices
+            //coś nie działa
             const dicesImg = element.dices.map((dice, index) => {
                 return (
                     <img key={index} src={require('../../img/d' + dice.value + '-icon.png')} alt="dice" />
                 )
             })
+
+
             //calculations sum Array witch score
             let throwScoreSum = 0;
             for (let i = 0; i < element.dices.length; i++) {

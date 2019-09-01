@@ -2,26 +2,25 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 5%;
   align-items: stretch;
+  min-height: 90vh;
+
 }
 
 .dicesToPick {
-  width: 100%;
-  flex-grow: 1;
   flex-wrap: wrap;
   padding: 3%;
   text-align: center;
+  margin-bottom: 20px;
 }
-
-/* eksperymenty z img box-shadow */
 
 .containerDicesToPick {
   position: relative;
   border-radius: 50%;
   display: inline-block;
-  width: 19%;
-  margin: 15% 5%;
+  width: 16%;
+  margin: 4vw;
+  margin-top: 15vw;
   transition: 0.4s;
   box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
 }
@@ -65,9 +64,13 @@
   }
 }
 
-/*.dicesPicked i dzieci */
+
 .dicesPicked {
   background-color: rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+  overflow: auto;
+  padding: 20px;
+  font-size: .8em;
 }
 
 .dicesPicked>h3 {
@@ -78,39 +81,152 @@
 
 .formPicked {
   display: flex;
-  flex-wrap: wrap;
-  min-height: 50px;
+  flex-direction: column;
 }
 
+
 .formPicked>div {
-  padding: 6px 15px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.formPicked>div>* {
+  text-align: center;
 }
 
 .formPicked input {
-  max-width: 100%;
+  display: block;
+  width: 80%;
   border: 1px solid transparent;
   border-bottom: solid 1px black;
   background-color: transparent;
-  margin: 5px;
+  margin: 9px auto;
   padding: 1%;
   padding-left: 5px;
-  font-size: 0.7rem;
+  font-size: 0.7em;
+}
+
+input::-webkit-input-placeholder {
+  color: black;
 }
 
 input[type=number] {
   text-align: center;
+  width: 40%;
 }
 
-input[type=number]::-webkit-inner-spin-button,
+/* input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   appearance: none;
-}
+} */
 
 .formPicked input:focus {
   outline: none;
 }
 
-.formPicked>div:nth-child(1) {
+/*button*/
+
+.submit {
+  margin: 0 auto;
+  display: inline-block;
+  padding: 20px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid white;
+  outline: none;
+  background-color: transparent;
+  white-space: nowrap;
+  transition: 1s;
+}
+
+.submit::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: .3s;
+}
+
+.submit::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: .3s;
+}
+
+.submit span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+
+.submit span::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 0px;
+  top: 0;
+  background-color: white;
+  transition: .3s;
+}
+
+.submit span::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  right: 0px;
+  top: 0;
+  background-color: white;
+  transition: .3s;
+}
+
+.submit:hover::after {
+  top: -10px;
+}
+
+.submit:hover::before {
+  bottom: -10px;
+}
+
+.submit:hover span::after {
+  left: -10px;
+}
+
+.submit:hover span::before {
+  right: -10px;
+}
+
+.submit:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.submit:hover span {}
+
+.containerPickedDices img {
+  height: 25px;
+  margin: 5px;
+}
+
+.errors {
+  color: red;
+}
+
+/* 
+dla dużego ekranu
+/* .formPicked>div:nth-child(1) {
   width: 25%;
 }
 
@@ -132,22 +248,4 @@ input[type=number]::-webkit-outer-spin-button {
 
 .formPicked>div:nth-child(4) {
   width: 20%;
-}
-
-.formPicked>div:nth-child(4) input {
-  display: block;
-  margin: 5px 10px 5px auto;
-  position: relative;
-}
-
-
-
-
-
-.formPicked>button:nth-child(5) {
-  width: 15%;
-}
-
-.containerPickedDices img {
-  height: 25px;
-}
+} */

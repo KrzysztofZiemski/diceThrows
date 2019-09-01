@@ -81,10 +81,18 @@ class Pages extends React.Component {
             value: sumValue,
         }
     }
+    handleToggleNav = (e) => {
+        document.querySelector('.mainMenu').classList.toggle('hide')
+        document.querySelector('.pages').classList.toggle('hide')
+
+
+
+    }
     render() {
 
         return (
             <div className="pages" >
+                <div onClick={this.handleToggleNav} className="switchNav"><span></span><span></span><span></span></div>
                 <>
                     <Switch>
                         <Route exact path="/" component={StartPage} />

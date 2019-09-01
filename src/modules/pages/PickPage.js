@@ -101,6 +101,10 @@ class PickPage extends React.Component {
         settings.modifier = "";
         settings.criticAvaible = false;
         settings.dices = [];
+
+        errors.errorName = true
+        errors.errorDices = true
+        errors.errorModifier = true
         this.setState({
             settings,
             errors
@@ -123,7 +127,11 @@ class PickPage extends React.Component {
 
     dices = [4, 6, 8, 10, 12, 20]
 
+
     render() {
+        const errorStyle = {
+            backgroundColor: '#ED1C1C',
+        }
         let dicesToPick = [...this.dices]
 
         dicesToPick = dicesToPick.map((element, index) => <div key={index} className="containerDicesToPick"><img id={'keyId' + index} onClick={(e) => this.handleCheck(e, element)} src={require('../../img/d' + element + '-icon.png')} alt="dice" /></div >
@@ -133,6 +141,7 @@ class PickPage extends React.Component {
             return <img key={index} src={require('../../img/d' + element.value + '-icon.png')
             } alt="dice" onClick={() => this.handleDelete(element)} className="" />
         })
+
         return (
             <div className="PickPage">
                 <div className="dicesToPick"> {dicesToPick}</div >
@@ -142,7 +151,7 @@ class PickPage extends React.Component {
                     <div className="formPicked">
                         <div>
                             <h4>Nazwa rzutu:</h4>
-                            <input placeholder="What's the throw name?" type="text" id="name" value={this.state.settings.nameRoll} onChange={this.handlePutName} />
+                            <input style={this.state.errors.errorName && this.state.errors.errorsActives ? errorStyle : null} placeholder="What's the throw name?" type="text" id="name" value={this.state.settings.nameRoll} onChange={this.handlePutName} />
                             {this.state.errors.errorName && this.state.errors.errorsActives ? <p className="errors">Wpisz nazwe rzutu</p> : null}
                         </div>
                         <div>
@@ -153,7 +162,7 @@ class PickPage extends React.Component {
                         </div>
                         <div>
                             <h4><label htmlFor="modifier">Modyfikator: </label></h4>
-                            <input type="number" id="modifier" value={this.state.settings.modifier} onChange={this.handleCheckModifier} />
+                            <input style={this.state.errors.errorModifier && this.state.errors.errorsActives ? errorStyle : null} type="number" id="modifier" value={this.state.settings.modifier} onChange={this.handleCheckModifier} />
                             {this.state.errors.errorModifier && this.state.errors.errorsActives ? <p className="errors">Wpisz modyfikator rzutu</p> : null}
                         </div>
                         <div className="criticalAvaible">
@@ -161,7 +170,7 @@ class PickPage extends React.Component {
                             <input type="checkbox" checked={this.state.settings.criticAvaible} onChange={this.handleCritic}></input>
                         </div>
 
-                        <button onClick={(e) => { this.handleCheckSubmit(e) }}>Dodaj parametry rzutu</button>
+                        <button className="submit" onClick={(e) => { this.handleCheckSubmit(e) }}>Dodaj parametry rzutu<span></span></button>
                     </div>
 
 

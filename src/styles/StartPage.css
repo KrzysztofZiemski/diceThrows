@@ -1,8 +1,8 @@
 .StartPage {
-    padding: 30px;
+    padding-top: 30px;
     text-align: center;
     font-family: 'Pacifico', cursive;
-    font-size: 2rem;
+    font-size: 1.1rem;
 
 }
 
@@ -12,4 +12,30 @@
 
 .StartPage h1 {
     margin: 40px;
+}
+
+@media (min-width: 799px) {
+    .StartPage h1 {
+        margin: 40px;
+    }
+
+    .StartPage {
+        padding-top: 30px;
+        font-size: 1.3rem;
+    }
+
+    .StartPage img {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1023px) {
+    .StartPage {
+        padding-top: 50px;
+        font-size: 1.5rem;
+    }
+
+    .StartPage img {
+        width: 40%;
+    }
 }

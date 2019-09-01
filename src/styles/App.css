@@ -1,9 +1,45 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+ * {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
 
+ body {
+   background-color: grey;
+ }
+
+ .App {
+   background-color: #fff;
+   display: flex;
+   flex-direction: column;
+   width: 90%;
+   margin: 0 auto 0 auto;
+   min-height: 100vh;
+   font-size: 10px;
+   overflow: auto;
+ }
+
+ .App .main {
+   flex-grow: 1;
+   display: flex;
+   min-height: 90vh;
+   background: linear-gradient(90deg, #cac531 0%, #e0cd1c 85%);
+ }
+
+ .App footer {
+   min-height: 10vh;
+   background-color: black;
+ }
+
+ .App .main main {
+   width: 100%;
+ }
+
+ @media (min-width: 799px) {}
+
+
+ /*
+DLA PEŁNEGO EKRANU
 body {
   min-height: 100vh;
   max-width: 1240px;
@@ -30,7 +66,6 @@ body {
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
   background: linear-gradient(90deg, #cac531 0%, #e0cd1c 85%);
-  /* background-image: url("../img/tapeta.jpg"); */
 }
 
 .main aside {
@@ -45,4 +80,4 @@ body {
 footer {
   min-height: 40px;
   background-color: #222;
-}
+} */

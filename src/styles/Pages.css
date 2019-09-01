@@ -1,9 +1,130 @@
 .pages {
+    min-height: 100%;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    position: relative;
+    width: 290px;
+    transition: .2s;
+    margin: 0 auto;
+    font-size: 30px;
+}
+
+.pages.hide .switchNav {}
+
+.switchNav {
+    top: 5px;
+    left: 15px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+.switchNav span {
+    position: absolute;
+    display: block;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    transition: .2s;
+}
+
+.switchNav span:nth-child(1) {
+    top: 23%;
+}
+
+.switchNav span:nth-child(2) {
+    top: 48%;
+}
+
+.switchNav span:nth-child(3) {
+    top: 73%;
+}
+
+.pages.hide .switchNav span:nth-child(1) {
+    display: none;
+}
+
+.pages.hide .switchNav span:nth-child(2) {
+    top: 50%;
+    left: 0;
+    transform: rotate(45deg)
+}
+
+.pages.hide .switchNav span:nth-child(3) {
+    top: 50%;
+    left: 0;
+    transform: rotate(-45deg)
+}
+
+@media (min-width: 400px) {
+    .pages {
+        font-size: 33px;
+        padding-top: 30px;
+        width: 390px;
+    }
+}
+
+@media (min-width: 500px) {
+    .pages {
+        font-size: 40px;
+        padding-top: 30px;
+        width: 490px;
+    }
+}
+
+@media (min-width: 600px) {
+    .pages {
+        font-size: 45px;
+        padding-top: 30px;
+        width: 590px;
+    }
+}
+
+@media (min-width: 800px) {
+    .pages {
+        font-size: 50px;
+        width: 780px;
+    }
+}
+
+@media (min-width: 900px) {
+    .pages {
+        width: 800px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pages {
+
+        width: 800px;
+        font-size: 20px;
+    }
+
+    .switchNav {
+        display: none;
+    }
+}
+
+@media (min-width: 1280px) {
+    .pages {
+        width: 900px;
+        font-size: 30px;
+    }
+
+    .switchNav {
+        display: none;
+    }
+}
+
+/* 
+DLA PEŁNEGO EKRANU
+
+.pages {
 
     height: 100%;
     display: flex;
     margin: 0 5%;
-    /* background-image: url("../img/tapeta.jpg"); */
     background-repeat: no-repeat;
 }
 
@@ -71,4 +192,4 @@
         top: 0px;
         left: 0
     }
-}
+} */

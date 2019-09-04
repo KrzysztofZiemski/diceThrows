@@ -8,8 +8,7 @@ const StartPage = () => {
             <img src={logo} alt="logo dnd" />
             <h1>Witam w świecie Dungeons and Dragons</h1>
             <p>Zapraszam i życzę samych krytyków.</p>
-            <p>Na wstępie udostepniono biblioteke losowania.</p>
-            <p>Przejdź do zakładki wyboru kostek i stwórz swoje rzuty</p>
+            <p>Przejdź do zakładki wyboru kostek i stwórz pakiety do rzucania</p>
         </div>);
 }
 

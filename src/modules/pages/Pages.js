@@ -26,10 +26,14 @@ class Pages extends React.Component {
     handleAdd = (object) => {
 
         let dicesPicked = [...this.state.dicesPicked]
-        let newObject = object;
-        newObject.id = this.state.actuallyIdPickPage;
-        dicesPicked.push(object)
-
+        const newObject = {};
+        newObject.nameRoll = object.nameRoll
+        newObject.modifier = object.modifier
+        newObject.criticAvaible = object.criticAvaible
+        newObject.dices = object.dices
+        newObject.id = this.state.actuallyIdPickPage
+        console.log(newObject)
+        dicesPicked.push(newObject)
         this.setState({
             dicesPicked,
             actuallyIdPickPage: this.state.actuallyIdPickPage + 1,
@@ -48,10 +52,21 @@ class Pages extends React.Component {
         for (let i = 0; i < dicesPicked[index].dices.length; i++) {
             const value = dicesPicked[index].dices[i].value;
             dicesPicked[index].dices[i].lastThrow = Math.floor((Math.random() * value) + 1)
+            console.log(dicesPicked[index])
+            if (dicesPicked[index].criticAvaible && dicesPicked[index].dices[i].lastThrow === value) {
+                console.log('weszło')
+                const App = document.querySelector('.App');
+                console.log(App)
+                App.classList.add('critic')
+                setTimeout(() => {
+                    App.classList.remove('critic')
+                }, 2000)
+            }
             throwScoreSum += dicesPicked[index].dices[i].lastThrow
             //if math ===max and critic is avaible change flag
             if (dicesPicked[index].dices[i].lastThrow === value && dicesPicked[index].critAvaible === true) { critic = true }
         }
+
         //add score to history
         let history = [...this.state.history]
         throwScoreSum += dicesPicked[index].modifier
@@ -84,9 +99,6 @@ class Pages extends React.Component {
     handleToggleNav = (e) => {
         document.querySelector('.mainMenu').classList.toggle('hide')
         document.querySelector('.pages').classList.toggle('hide')
-
-
-
     }
     render() {
 

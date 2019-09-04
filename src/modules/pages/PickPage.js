@@ -1,11 +1,12 @@
 import React from 'react';
 import '../../styles/PickPage.css'
-
+import select from '../../img/select.png'
+import unselect from '../../img/unselect.png'
 class PickPage extends React.Component {
     state = {
         settings: {
             nameRoll: "",
-            modifier: "",
+            modifier: 0,
             criticAvaible: false,
             dices: [],
         },
@@ -22,9 +23,14 @@ class PickPage extends React.Component {
         let errors = Object.assign({}, this.state.errors)
         let settings = Object.assign({}, this.state.settings)
         settings.modifier = e.target.value;
-        if (settings.modifier < 1) errors.errorModifier = true;
-        else errors.errorModifier = false;
 
+        if (settings.modifier < 0) errors.errorModifier = true;
+        else errors.errorModifier = false;
+        //delete 0 from begin number
+        if (settings.modifier.length > 1) {
+            settings.modifier *= 1
+            settings.modifier = parseInt(settings.modifier, 10)
+        }
         this.setState({
             settings,
             errors
@@ -84,8 +90,7 @@ class PickPage extends React.Component {
     handleCheckSubmit = (e) => {
         let settings = Object.assign({}, this.state.settings)
         let errors = Object.assign({}, this.state.errors)
-
-        if (errors.errorName || errors.errorDices || errors.errorModifier) {
+        if (errors.errorName || errors.errorDices || errors.errorModifier < 0) {
             errors.errorsActives = true
         } else {
             errors.errorsActives = false;
@@ -94,11 +99,12 @@ class PickPage extends React.Component {
             errors
         })
         if (errors.errorsActives) return
+        //emove first 0 if egsist
 
         this.props.submit(settings)
 
         settings.nameRoll = "";
-        settings.modifier = "";
+        settings.modifier = 0;
         settings.criticAvaible = false;
         settings.dices = [];
 
@@ -162,12 +168,15 @@ class PickPage extends React.Component {
                         </div>
                         <div>
                             <h4><label htmlFor="modifier">Modyfikator: </label></h4>
-                            <input style={this.state.errors.errorModifier && this.state.errors.errorsActives ? errorStyle : null} type="number" id="modifier" value={this.state.settings.modifier} onChange={this.handleCheckModifier} />
-                            {this.state.errors.errorModifier && this.state.errors.errorsActives ? <p className="errors">Wpisz modyfikator rzutu</p> : null}
+                            <input style={this.state.errors.errorModifier < 0 && this.state.errors.errorsActives ? errorStyle : null} type="number" id="modifier" value={this.state.settings.modifier} onChange={this.handleCheckModifier} />
+                            {this.state.errors.errorModifier < 0 && this.state.errors.errorsActives ? <p className="errors">Wpisz modyfikator rzutu</p> : null}
                         </div>
                         <div className="criticalAvaible">
                             <h4>Czy możliwy krytyk:</h4>
-                            <input type="checkbox" checked={this.state.settings.criticAvaible} onChange={this.handleCritic}></input>
+                            <div>
+                                <input type="checkbox" checked={this.state.settings.criticAvaible} onChange={this.handleCritic}></input>
+                                <img src={this.state.settings.criticAvaible ? select : unselect} alt="" />
+                            </div>
                         </div>
 
                         <button className="submit" onClick={(e) => { this.handleCheckSubmit(e) }}>Dodaj parametry rzutu<span></span></button>

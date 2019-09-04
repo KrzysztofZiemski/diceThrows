@@ -9,6 +9,7 @@
  }
 
  .App {
+   position: relative;
    background-color: #fff;
    display: flex;
    flex-direction: column;
@@ -17,6 +18,10 @@
    min-height: 100vh;
    font-size: 10px;
    overflow: auto;
+ }
+
+ .App.critic {
+   animation: critic .2s linear;
  }
 
  .App .main {
@@ -81,3 +86,61 @@ footer {
   min-height: 40px;
   background-color: #222;
 } */
+
+
+ @keyframes critic {
+   0% {
+     top: -10px;
+     left: -10px;
+   }
+
+   10% {
+     top: 10px;
+     left: 10px;
+   }
+
+   20% {
+     top: 20px;
+     left: 20px;
+   }
+
+   30% {
+     top: -20px;
+     left: -20px;
+   }
+
+   40% {
+     top: 0px;
+     left: -50px;
+   }
+
+   50% {
+     top: 20px;
+     left: -10px;
+   }
+
+   60% {
+     top: -20px;
+     left: 20px;
+   }
+
+   70% {
+     top: -30px;
+     left: -30px;
+   }
+
+   80% {
+     top: 10px;
+     left: 10px;
+   }
+
+   90% {
+     top: 40px;
+     left: 40px;
+   }
+
+   100% {
+     top: 0px;
+     left: 0px;
+   }
+ }

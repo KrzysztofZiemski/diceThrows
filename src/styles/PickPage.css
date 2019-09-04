@@ -9,31 +9,41 @@
 
 .dicesToPick {
   flex-wrap: wrap;
-  padding: 3%;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .containerDicesToPick {
-  position: relative;
-  border-radius: 50%;
   display: inline-block;
-  width: 16%;
-  margin: 4vw;
-  margin-top: 15vw;
-  transition: 0.4s;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.containerDicesToPick::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 1px;
   box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
 }
 
-.containerDicesToPick:hover {
+.containerDicesToPick:hover::after {
+
   animation: pulse 2s linear infinite;
-  cursor: pointer;
+
 }
 
 .containerDicesToPick img {
   position: absolute;
-  transform: translate(-50%, -50%);
   width: 100%;
+  transform: translate(-50%, 0)
 }
 
 .clickedDice {
@@ -42,11 +52,11 @@
 
 @keyframes pickDice {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, 0%) rotate(0deg);
   }
 
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, 0%) rotate(360deg);
   }
 }
 
@@ -115,19 +125,49 @@ input[type=number] {
   width: 40%;
 }
 
-/* input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  appearance: none;
-} */
-
 .formPicked input:focus {
   outline: none;
+}
+
+
+/* criticalAvaible */
+
+.criticalAvaible {
+  text-align: center;
+}
+
+.criticalAvaible div {
+  position: relative;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+
+}
+
+.criticalAvaible div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.criticalAvaible div input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
 }
 
 /*button*/
 
 .submit {
-  margin: 0 auto;
+  margin: 10px auto 0 auto;
   display: inline-block;
   padding: 20px 30px;
   font-size: 1em;
@@ -213,7 +253,7 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.submit:hover span {}
+
 
 .containerPickedDices img {
   height: 25px;
@@ -223,29 +263,3 @@ input[type=number]::-webkit-outer-spin-button {
 .errors {
   color: red;
 }
-
-/* 
-dla dużego ekranu
-/* .formPicked>div:nth-child(1) {
-  width: 25%;
-}
-
-.formPicked>div:nth-child(2) {
-  width: 25%;
-}
-
-.formPicked>div:nth-child(2) p {
-  padding: 2%;
-}
-
-.formPicked>div:nth-child(3) {
-  width: 15%;
-}
-
-.formPicked>div:nth-child(3) input {
-  width: 50%;
-}
-
-.formPicked>div:nth-child(4) {
-  width: 20%;
-} */

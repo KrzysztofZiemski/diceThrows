@@ -2,7 +2,7 @@
     padding-top: 30px;
     text-align: center;
     font-family: 'Pacifico', cursive;
-    font-size: 1.1rem;
+    font-size: 13px;
 
 }
 
@@ -14,6 +14,20 @@
     margin: 40px;
 }
 
+@media (min-width: 400px) {
+    .StartPage {
+
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 400px) {
+    .StartPage {
+
+        font-size: 20px;
+    }
+}
+
 @media (min-width: 799px) {
     .StartPage h1 {
         margin: 40px;
@@ -21,7 +35,7 @@
 
     .StartPage {
         padding-top: 30px;
-        font-size: 1.3rem;
+        font-size: 25px;
     }
 
     .StartPage img {
@@ -32,7 +46,7 @@
 @media (min-width: 1023px) {
     .StartPage {
         padding-top: 50px;
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
 
     .StartPage img {

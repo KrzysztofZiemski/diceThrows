@@ -1,22 +1,25 @@
 .pages {
     min-height: 100%;
     padding-bottom: 20px;
-    padding-top: 30px;
+    padding-top: 50px;
     position: relative;
-    width: 290px;
+    width: 280px;
     transition: .2s;
     margin: 0 auto;
-    font-size: 30px;
+    font-size: 20px;
+    max-width: 100%;
+    font-family: arial;
 }
 
-.pages.hide .switchNav {}
 
+/*button to toggle menu*/
 .switchNav {
     top: 5px;
-    left: 15px;
+    left: 5px;
     position: absolute;
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
 .switchNav span {
@@ -61,7 +64,7 @@
     .pages {
         font-size: 33px;
         padding-top: 30px;
-        width: 390px;
+        width: 380px;
     }
 }
 
@@ -69,7 +72,7 @@
     .pages {
         font-size: 40px;
         padding-top: 30px;
-        width: 490px;
+        width: 450px;
     }
 }
 
@@ -77,14 +80,14 @@
     .pages {
         font-size: 45px;
         padding-top: 30px;
-        width: 590px;
+        width: 540px;
     }
 }
 
 @media (min-width: 800px) {
     .pages {
         font-size: 50px;
-        width: 780px;
+        width: 720px;
     }
 }
 
@@ -116,80 +119,3 @@
         display: none;
     }
 }
-
-/* 
-DLA PEŁNEGO EKRANU
-
-.pages {
-
-    height: 100%;
-    display: flex;
-    margin: 0 5%;
-    background-repeat: no-repeat;
-}
-
-.page {
-    height: 100%;
-    text-align: center;
-}
-
-.critic {
-    animation: critic 0.3s linear;
-}
-
-@keyframes critic {
-    0% {
-        top: 0px;
-        left: 0px
-    }
-
-    10% {
-        top: 20px;
-        left: 50px
-    }
-
-    20% {
-        top: -10px;
-        left: 80px
-    }
-
-    30% {
-        top: 20px;
-        left: 20px
-    }
-
-    40% {
-        top: -40px;
-        left: -10px
-    }
-
-    50% {
-        top: -20px;
-        left: -50px
-    }
-
-    60% {
-        top: -70px;
-        left: -20px
-    }
-
-    70% {
-        top: -40px;
-        left: 0px
-    }
-
-    80% {
-        top: 0px;
-        left: 10px
-    }
-
-    60% {
-        top: 20px;
-        left: -10px
-    }
-
-    100% {
-        top: 0px;
-        left: 0
-    }
-} */

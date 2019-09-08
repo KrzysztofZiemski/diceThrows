@@ -35,9 +35,9 @@
     border: none;
     width: 20px;
     height: 20px;
-    right: -20px;
+    left: -20px;
     top: 0;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .rollsElement button.delete::after {
@@ -70,12 +70,18 @@
 
 .rollsElement .nameRoll {
     width: 80%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rollsElement .modifierRoll {
     width: 20%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .4);
+    color: greenyellow
 }
 
 .rollsElement .dicesRoll {
@@ -124,6 +130,15 @@
 .throwParameters {
     width: 70%;
     text-align: center;
+
+}
+
+.throwParameters .modifierThrow {
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: rgba(0, 0, 0, .4);
+    padding: 1px 5px 1px 5px;
+    color: greenyellow
 }
 
 .throwSum {
@@ -164,9 +179,12 @@
 }
 
 @media (min-width: 1024px) {
-    .rollsElement {
-        font-size: .8em;
 
+    .rollsElement {
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        padding: 0;
     }
 
     .rollsElement img {
@@ -175,5 +193,83 @@
 
     .btnRollStart img {
         width: 50%;
+    }
+
+
+
+    /*skopiowane*/
+    .rollsElement>* {
+        margin: 12px;
+
+    }
+
+    .rollsElement .nameRoll {
+        width: 20%;
+    }
+
+    .rollsElement .modifierRoll {
+        width: 7%;
+        text-align: center;
+    }
+
+    .rollsElement .dicesRoll {
+        display: block;
+        width: 30%;
+        max-height: 100px;
+        overflow: auto;
+    }
+
+    /* width */
+    .dicesRoll::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    /* Track */
+    .dicesRoll::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px blue;
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    .dicesRoll::-webkit-scrollbar-thumb {
+        background: red;
+        border-radius: 10px;
+    }
+
+    .btnRollStart {
+        width: 10%;
+    }
+
+    .btnRollStart:hover {
+        top: -3px;
+        left: -3px;
+    }
+
+    .btnRollStart img {
+        width: 80%;
+    }
+
+    .rollsElement .scoreRoll {
+        width: 20%;
+        font-size: .5em;
+    }
+
+    .throwParameters {
+        width: 70%;
+    }
+
+    .throwSum {
+        display: flex;
+        font-size: 1.3em;
+        align-items: center;
+        border: none;
+    }
+
+    .throwSum span {
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 13px;
+        border: 1px solid black;
     }
 }

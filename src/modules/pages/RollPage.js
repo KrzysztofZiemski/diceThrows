@@ -46,7 +46,7 @@ class RollPage extends React.Component {
                         </div>
 
                         <div className="scoreRoll">
-                            {showLastThrow ? <><div className="throwParameters">{throwScore}<span>{element.modifier}</span></div>
+                            {showLastThrow ? <><div className="throwParameters">{throwScore}<span className="modifierThrow">{element.modifier}</span></div>
                                 <div className="throwSum"> <span>{throwScoreSum}</span></div></> : <div className="throwSum">-</div>}
                         </div>
                     </div>

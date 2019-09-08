@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/dicesThrows/static/css/main.76b4ed63.chunk.css",
+    "main.js": "/dicesThrows/static/js/main.4e9b95d9.chunk.js",
+    "main.js.map": "/dicesThrows/static/js/main.4e9b95d9.chunk.js.map",
+    "runtime~main.js": "/dicesThrows/static/js/runtime~main.9d3ca9f3.js",
+    "runtime~main.js.map": "/dicesThrows/static/js/runtime~main.9d3ca9f3.js.map",
+    "static/js/2.5308031a.chunk.js": "/dicesThrows/static/js/2.5308031a.chunk.js",
+    "static/js/2.5308031a.chunk.js.map": "/dicesThrows/static/js/2.5308031a.chunk.js.map",
+    "index.html": "/dicesThrows/index.html",
+    "precache-manifest.ef2dbb6adb02cddee1a1769e274fd94a.js": "/dicesThrows/precache-manifest.ef2dbb6adb02cddee1a1769e274fd94a.js",
+    "service-worker.js": "/dicesThrows/service-worker.js",
+    "static/css/main.76b4ed63.chunk.css.map": "/dicesThrows/static/css/main.76b4ed63.chunk.css.map",
+    "static/media/attack.png": "/dicesThrows/static/media/attack.fc91832e.png",
+    "static/media/d10-icon.png": "/dicesThrows/static/media/d10-icon.73305845.png",
+    "static/media/d12-icon.png": "/dicesThrows/static/media/d12-icon.ec6df3a9.png",
+    "static/media/d20-icon.png": "/dicesThrows/static/media/d20-icon.25a04458.png",
+    "static/media/d4-icon.png": "/dicesThrows/static/media/d4-icon.cdad945b.png",
+    "static/media/d8-icon.png": "/dicesThrows/static/media/d8-icon.226340d9.png",
+    "static/media/dices-roll.png": "/dicesThrows/static/media/dices-roll.eb6ffb45.png",
+    "static/media/dndLogo.png": "/dicesThrows/static/media/dndLogo.942b53ac.png",
+    "static/media/history2.png": "/dicesThrows/static/media/history2.fbdfcf32.png",
+    "static/media/logoDnd.png": "/dicesThrows/static/media/logoDnd.3070a8a0.png",
+    "static/media/select.png": "/dicesThrows/static/media/select.2c372b4c.png",
+    "static/media/unselect.png": "/dicesThrows/static/media/unselect.eb147918.png"
+  }
+}

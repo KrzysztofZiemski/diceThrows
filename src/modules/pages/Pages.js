@@ -10,7 +10,13 @@ import ErrorPage from './ErrorPage'
 
 class Pages extends React.Component {
     state = {
-        dicesPicked: [],
+        dicesPicked: [
+            {
+                nameRoll: "ewrdsf", modifier: 1, criticAvaible: true, dices: [{ value: 20, lastThrow: "" }, { value: 20, lastThrow: "" }, { value: 20, lastThrow: "" }], id: 1
+            }, {
+                nameRoll: "ewrdsf", modifier: 1, criticAvaible: true, dices: [{ value: 20, lastThrow: "" }, { value: 20, lastThrow: "" }, { value: 20, lastThrow: "" }], id: 1
+            }
+        ],
         history: [],
         actuallyIdPickPage: 1,
     }
@@ -28,11 +34,10 @@ class Pages extends React.Component {
         let dicesPicked = [...this.state.dicesPicked]
         const newObject = {};
         newObject.nameRoll = object.nameRoll
-        newObject.modifier = object.modifier
+        newObject.modifier = object.modifier * 1
         newObject.criticAvaible = object.criticAvaible
         newObject.dices = object.dices
         newObject.id = this.state.actuallyIdPickPage
-        console.log(newObject)
         dicesPicked.push(newObject)
         this.setState({
             dicesPicked,
@@ -101,7 +106,7 @@ class Pages extends React.Component {
         document.querySelector('.pages').classList.toggle('hide')
     }
     render() {
-
+        console.log(typeof this.state.dicesPicked[0].modifier)
         return (
             <div className="pages" >
                 <div onClick={this.handleToggleNav} className="switchNav"><span></span><span></span><span></span></div>

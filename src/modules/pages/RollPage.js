@@ -32,25 +32,26 @@ class RollPage extends React.Component {
             throwScore = throwScore.map((score, index) => <span key={index}>{score}</span>)
 
             return (
-                <div key={element.id} className="rollsElement">
-                    <button onClick={() => this.props.delete(element.id)}>Usuń</button>
-                    <div>
-                        <p>{element.nameRoll}</p>
+                <div key={element.id} className="rollsElementCantainer">
+                    <div className="rollsElement">
+                        <button className="delete" onClick={() => this.props.delete(element.id)}></button>
+                        <div className="nameRoll">
+                            <p>{element.nameRoll}</p>
+                        </div>
+                        <div className="modifierRoll">
+                            <p><span>+</span>{element.modifier}</p>
+                        </div>
+                        <div className="dicesRoll">
+                            {dicesImg}
+                        </div>
+
+                        <div className="scoreRoll">
+                            {showLastThrow ? <><div className="throwParameters">{throwScore}<span>{element.modifier}</span></div>
+                                <div className="throwSum"> <span>{throwScoreSum}</span></div></> : <div className="throwSum">-</div>}
+                        </div>
                     </div>
-                    <div>
-                        <p>{element.modifier}</p>
-                    </div>
-                    <div>
-                        <div>{dicesImg}</div>
-                    </div>
-                    <button onClick={() => this.props.roll(element.id)}><img src={attack} alt="" /></button>
-                    <div>
-                        {showLastThrow ? <div>
-                            <p>{throwScore}<span>{element.modifier}</span></p>
-                            <p>{throwScoreSum}</p>
-                        </div> : null}
-                    </div>
-                </div>
+                    <button className="btnRollStart" onClick={() => this.props.roll(element.id)}><img src={attack} alt="" /></button>
+                </div >
             )
         })
 

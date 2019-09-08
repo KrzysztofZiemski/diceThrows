@@ -26,7 +26,6 @@ class PickPage extends React.Component {
 
         if (settings.modifier < 0) errors.errorModifier = true;
         else errors.errorModifier = false;
-        //delete 0 from begin number
         if (settings.modifier.length > 1) {
             settings.modifier *= 1
             settings.modifier = parseInt(settings.modifier, 10)

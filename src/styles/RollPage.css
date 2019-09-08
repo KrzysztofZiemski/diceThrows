@@ -2,21 +2,178 @@
     padding: 3%;
 }
 
-.rollsElement {
+.rollsElementCantainer {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+}
+
+.rollsElement {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 30px;
     padding: 2%;
-    justify-content: space-around;
+    margin: 10px;
+    font-size: .8em;
+}
+
+.rollsElement * {
+    padding: 2px;
 }
 
 .rollsElement img {
-    width: 100px;
+    width: 20px;
 }
 
-.rollsElement button {
+.rollsElement button.delete {
     background-color: transparent;
+    position: absolute;
     border: none;
-    display: block;
+    width: 20px;
+    height: 20px;
+    right: -20px;
+    top: 0;
+    transition: 0.3s;
+}
 
+.rollsElement button.delete::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: black;
+}
+
+.rollsElement button.delete::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    transform: rotate(-45deg);
+    background-color: black;
+}
+
+.rollsElement button.delete:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+.rollsElement .nameRoll {
+    width: 80%;
+    text-align: center;
+}
+
+.rollsElement .modifierRoll {
+    width: 20%;
+    text-align: center;
+}
+
+.rollsElement .dicesRoll {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btnRollStart {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 20%;
+    box-shadow: 0px 0px 4px #000;
+    align-self: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    transition: .2s;
+    outline: none;
+}
+
+.btnRollStart:hover {
+    top: -5px;
+    left: -5px;
+    box-shadow: 5px 5px 4px #000;
+}
+
+.btnRollStart:active {
+    top: 0px;
+    left: 0px;
+    box-shadow: 0px 0px 4px #000;
+    border: none;
+}
+
+.btnRollStart img {
+    width: 100%;
+}
+
+.rollsElement .scoreRoll {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.throwParameters {
+    width: 70%;
+    text-align: center;
+}
+
+.throwSum {
+    position: relative;
+    width: 25%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.throwSum span {
+    position: relative;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+@media (min-width: 400px) {
+    .rollsElement {
+        font-size: .8em;
+    }
+
+    .rollsElement img {
+        width: 30px;
+    }
+}
+
+@media (min-width: 500px) {
+    .rollsElement {
+        font-size: .9em;
+    }
+
+    .rollsElement img {
+        width: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .rollsElement {
+        font-size: .8em;
+
+    }
+
+    .rollsElement img {
+        width: 50px;
+    }
+
+    .btnRollStart img {
+        width: 50%;
+    }
 }

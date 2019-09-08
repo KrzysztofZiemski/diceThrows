@@ -39,7 +39,7 @@ class RollPage extends React.Component {
                             <p>{element.nameRoll}</p>
                         </div>
                         <div className="modifierRoll">
-                            <p><span>+</span>{element.modifier}</p>
+                            <p><span>{element.modifier < 0 ? null : "+"}</span>{element.modifier}</p>
                         </div>
                         <div className="dicesRoll">
                             {dicesImg}

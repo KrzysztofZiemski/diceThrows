@@ -10,13 +10,7 @@ import ErrorPage from './ErrorPage'
 
 class Pages extends React.Component {
     state = {
-        dicesPicked: [
-            {
-                nameRoll: "ewrdsf", modifier: 1, criticAvaible: true, dices: [{ value: 20, lastThrow: "" }, { value: 20, lastThrow: "" }, { value: 20, lastThrow: "" }], id: 1
-            }, {
-                nameRoll: "ewrdsf", modifier: 1, criticAvaible: true, dices: [{ value: 20, lastThrow: "" }, { value: 20, lastThrow: "" }, { value: 20, lastThrow: "" }], id: 1
-            }
-        ],
+        dicesPicked: [],
         history: [],
         actuallyIdPickPage: 1,
     }
@@ -57,11 +51,11 @@ class Pages extends React.Component {
         for (let i = 0; i < dicesPicked[index].dices.length; i++) {
             const value = dicesPicked[index].dices[i].value;
             dicesPicked[index].dices[i].lastThrow = Math.floor((Math.random() * value) + 1)
-            console.log(dicesPicked[index])
+
             if (dicesPicked[index].criticAvaible && dicesPicked[index].dices[i].lastThrow === value) {
-                console.log('weszło')
+
                 const App = document.querySelector('.App');
-                console.log(App)
+
                 App.classList.add('critic')
                 setTimeout(() => {
                     App.classList.remove('critic')
@@ -77,7 +71,6 @@ class Pages extends React.Component {
         throwScoreSum += dicesPicked[index].modifier
         const newHistoryElement = this.handleAddToHistory(dicesPicked[index], throwScoreSum)
         history.push(newHistoryElement)
-
         //if critic flag==true add classname to shake
         if (critic) this.handleCritic()
 
@@ -99,6 +92,7 @@ class Pages extends React.Component {
             nameRoll: object.nameRoll,
             modifier: object.modifier,
             value: sumValue,
+            date: new Date()
         }
     }
     handleToggleNav = (e) => {
@@ -106,7 +100,6 @@ class Pages extends React.Component {
         document.querySelector('.pages').classList.toggle('hide')
     }
     render() {
-        console.log(typeof this.state.dicesPicked[0].modifier)
         return (
             <div className="pages" >
                 <div onClick={this.handleToggleNav} className="switchNav"><span></span><span></span><span></span></div>

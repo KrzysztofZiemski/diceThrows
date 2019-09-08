@@ -1,0 +1,46 @@
+.historyPage {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: .6em;
+}
+
+.historyPage div:first-child {
+    border-bottom: 1px solid black;
+}
+
+.historyElement {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    width: 100%;
+}
+
+
+
+.historyElement span:first-child {
+    width: 50%;
+}
+
+.historyDates {
+    text-align: right;
+    width: 100%;
+}
+
+.historyDates span {
+    margin: 3%;
+}
+
+@media (min-width: 800px) {
+    .historyPage div:first-child {
+        border-bottom: 3px solid black;
+        border-right: 3px solid black;
+    }
+
+    .historyElement {
+        margin: 7px 20px 0 0;
+        width: 45%;
+        background-color: rgba(0, 0, 0, .1);
+
+    }
+}

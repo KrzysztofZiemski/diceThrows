@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/HistoryPage.css'
 const HistoryPage = (props) => {
     let history = props.history.reverse()
-    history = props.history.map((element, index) => <div className="historyElement" key={index}><span>{element.nameRoll}</span><span>Wynik: {element.value} ({element.modifier < 0 ? null : "+"}{element.modifier})</span>
+    history = props.history.map((element, index) => <div className="historyElement" key={index}><span>{index + 1}) {element.nameRoll}</span><span>Wynik: {element.value} ({element.modifier < 0 ? null : "+"}{element.modifier})</span>
         <span className="historyDates">
             <span>
                 {element.date.getFullYear()}-{element.date.getMonth() < 10 ? "0" + element.date.getMonth() : element.date.getMonth()}-{element.date.getDate() < 10 ? "0" + element.date.getDate() : element.date.getDate()}

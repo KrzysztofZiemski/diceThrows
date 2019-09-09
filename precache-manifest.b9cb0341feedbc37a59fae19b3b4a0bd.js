@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7bdb336814b6edfb69851bf388538091",
+    "revision": "9e95d7ef5473969b56bb4c9c378f5935",
     "url": "/dicesThrows/index.html"
   },
   {
-    "revision": "06fe58908eb8396cc2e9",
-    "url": "/dicesThrows/static/css/main.76b4ed63.chunk.css"
+    "revision": "fab1f53b92df20c1efb8",
+    "url": "/dicesThrows/static/css/main.7e3c838c.chunk.css"
   },
   {
-    "revision": "f0f6ffd1818a6fff80cb",
-    "url": "/dicesThrows/static/js/2.5308031a.chunk.js"
+    "revision": "da250e3f429e3db38cce",
+    "url": "/dicesThrows/static/js/2.35a30887.chunk.js"
   },
   {
-    "revision": "06fe58908eb8396cc2e9",
-    "url": "/dicesThrows/static/js/main.e53c35c8.chunk.js"
+    "revision": "fab1f53b92df20c1efb8",
+    "url": "/dicesThrows/static/js/main.757a70d9.chunk.js"
   },
   {
     "revision": "9546deccd2a49d30853a",

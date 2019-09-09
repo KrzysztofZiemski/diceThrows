@@ -1,0 +1,16 @@
+.ErrorPage h1 {
+    color: red;
+    margin: 50px;
+    text-align: center;
+}
+
+.ErrorPage p {
+    margin: 50px;
+    text-align: center;
+}
+
+.ErrorPage a {
+    display: block;
+    margin: 50px;
+    text-align: center;
+}

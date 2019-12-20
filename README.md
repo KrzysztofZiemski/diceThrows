@@ -3,7 +3,7 @@
 This project was create to learning React(javascript library).
 Thanks this app we can put dice set to roll.
 This can be very helpful during game Dungeons and Dragons.
-
+https://krzysztofziemski.github.io/diceThrows/
 ## instal
 
 To run this project you need instal:

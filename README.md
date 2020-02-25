@@ -3,7 +3,11 @@
 This project was create to learning React(javascript library).
 Thanks this app we can put dice set to roll.
 This can be very helpful during game Dungeons and Dragons.
+
+Live:
 https://krzysztofziemski.github.io/diceThrows/
+
+
 ## instal
 
 To run this project you need instal:
@@ -11,15 +15,9 @@ To run this project you need instal:
 Node.js
 
 React - command powershell(or other):
-npx create-react-app my-app 
+
+npm i
 npm start
-
-React Router Dom:
-npm install react-router-dom
-
-
-serwer with static path files(u can use live server extension in Visual Studio Code)
-
 
 ## use
 
@@ -31,23 +29,23 @@ look a history(last overlap)
 The history don't save result on data base. Refresh page delete all.
 
 
-##components
+## components
 
 This projest has 4 main components:
 
-###App.js
+### App.js
 router app
 Render Nav component
 Pages component
 Footer component
 
-###Nav
+### Nav
 menu created by Navlink 
 
-###Footer
+### Footer
 don't end this component yet
 
-###Pages
+### Pages
 
 Pages component is rendering other components depend on what you selected in the nav.
 Switch one of four components
